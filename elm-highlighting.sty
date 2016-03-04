@@ -99,6 +99,7 @@
   keepspaces=true, % Does not ignore spaces to fit width, convert tabs to spaces
   breaklines=true, % Wrap lines if they don't fit
   showstringspaces=false, % Lets spaces in strings appear as real spaces
+  mathescape=true, % Enable math escape
   commentstyle=\color{elm-gray}, % Style of comments
   keywordstyle=\color{elm-orange}, % Style of keywords
   stringstyle=\color{elm-orange}, % Style of strings
@@ -134,4 +135,9 @@
     % Format Symbols
     {\(..\)}{{{ ({\color{elm-orange}..})}}}1
     {=}{{{\color{elm-orange}=}}}1
+    {:}{{{\color{elm-orange}:}}}1
+    {->}{{{\color{elm-orange}->}}}1
 }
+
+%% Define command for inlining %%
+\newcommand{\elmtt}[1]{\lstinline[language=elm]!#1!}
